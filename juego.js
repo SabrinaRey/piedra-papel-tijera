@@ -12,7 +12,14 @@ let empate = "Han empatado";
 
 let ganador = "El ganador es: ";
 
+let puntosUsuarioUno =0;
 
+let puntosUsuarioDos =0;
+
+let final ="El juego ha terminado y el ganador es: "
+
+
+for ( let i = 0; puntosUsuarioUno < 2|| puntosUsuarioDos < 2; i++) {
 
 let eleccionUsuario1 = prompt(usuarioUno + ": Elegí piedra, papel o tijera");
 
@@ -25,25 +32,33 @@ if (eleccionUsuario1 === piedra || eleccionUsuario1 === tijera || eleccionUsuari
 
     else if (eleccionUsuario1 === piedra && eleccionUsuario2 === papel) {
         alert(ganador + usuarioDos)
-    }
+        puntosUsuarioDos++
+
+           }
     else if (eleccionUsuario1 === piedra && eleccionUsuario2 === tijera) {
         alert(ganador + usuarioUno)
+        puntosUsuarioUno++
     }
     else if (eleccionUsuario1 === papel && eleccionUsuario2 === piedra) {
         alert(ganador + usuarioUno)
+        puntosUsuarioUno++
     }
     
     else if (eleccionUsuario1 === papel && eleccionUsuario2 === tijera) {
         alert(ganador + usuarioDos)
+        puntosUsuarioDos++
     }
 
     else if (eleccionUsuario1 === tijera && eleccionUsuario2 === papel) {
         alert(ganador + usuarioUno)
+        puntosUsuarioUno++
     }
 
     else if (eleccionUsuario1 === tijera && eleccionUsuario2 === piedra) {
         alert(ganador + usuarioDos)
+        puntosUsuarioDos++
     }
+    
 
     else {
         alert("No podes seguir jugando");
@@ -52,6 +67,17 @@ if (eleccionUsuario1 === piedra || eleccionUsuario1 === tijera || eleccionUsuari
 else {
     alert("No podes seguir jugando");
 };
+}
+
+if (puntosUsuarioUno > puntosUsuarioDos) {
+    alert( final + usuarioUno)
+}
+else {
+    alert( final + usuarioDos)
+
+};
+
+
 
 
 
