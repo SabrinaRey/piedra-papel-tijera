@@ -19,8 +19,9 @@ let puntosUsuarioDos =0;
 let final ="El juego ha terminado y el ganador es: "
 
 
-for ( let i = 0; puntosUsuarioUno < 2|| puntosUsuarioDos < 2; i++) {
+for ( let i = 0; puntosUsuarioUno < 2 && puntosUsuarioDos < 2; i++) {
 
+ 
 let eleccionUsuario1 = prompt(usuarioUno + ": Elegí piedra, papel o tijera");
 
 if (eleccionUsuario1 === piedra || eleccionUsuario1 === tijera || eleccionUsuario1 === papel) {
@@ -67,7 +68,7 @@ if (eleccionUsuario1 === piedra || eleccionUsuario1 === tijera || eleccionUsuari
 else {
     alert("No podes seguir jugando");
 };
-}
+} 
 
 if (puntosUsuarioUno > puntosUsuarioDos) {
     alert( final + usuarioUno)
